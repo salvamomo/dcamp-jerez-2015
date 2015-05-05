@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -41,51 +41,102 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1>No esperes a Drupal 8 para ampliar tu juego de herramientas</h1>
+					<h3>DrupalCamp Jerez 2015</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Por <a href="http://adevfromtheplains.com/">Salva Molina</a> / <a href="http://twitter.com/salva_bg">@salva_bg</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
+					<h2>Who The F...?</h2>
+                    <ul>
+                        <li>Salva Molina</li>
+                        <li><a href="https://www.drupal.org/u/slv_">slv_</a> en Drupal.org</li>
+                        <li>Drupal Developer @ Code Enigma</li>
+                        <li>Rants, cries and nonsense at <a href="http://adevfromtheplains.com/">http://adevfromtheplains.com</a></li>
+                    </ul>
 				</section>
+
+                <section>
+                    <h2>De qué vamos a hablar?</h2>
+                    <ul>
+                        <li>Generación de código para custom fields.</li>
+                        <li>Yeoman, bitches</li>
+                        <li>Genova</li>
+                        <li>IDC (Drush for hipsters)</li>
+                    </ul>
+                </section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h2>The Field Type Generator (FTG)</h2>
+
+                        <ul>
+                            <li>Referencias a tipos de contenido?</li>
+                            <li>Referencias a entidades personalizadas?</li>
+                            <li>Field collections?</li>
+                            <li>Campos personalizados mediante Field API?</li>
+                        </ul>
+					</section>
+                    <section>
+                        <h2>Custom personalizados: Problema</h2>
+                        <ol>
+                            <li>Referencias a tipos de contenido?</li>
+                            <li>Referencias a entidades personalizadas?</li>
+                            <li>Field collections?</li>
+                            <li>Campos personalizados mediante Field API?</li>
+                        </ol>
+                    </section>
+					<section>
+                        <h2>La solución: FTG</h2>
+						<p>Venga esa Demo, bitch.</p>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
+                        <h2>Dries Approves</h2>
 						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
+							<img data-src="http://myreactiongifs.com/gifs/thumbsupcomputerkid.gif">
 						</a>
 					</section>
 				</section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
+                <!-- Example of nested vertical slides -->
+                <section>
+                    <section>
+                        <img data-src="https://blog.openshift.com/wp-content/uploads/imported/yeoman-logo.png">
+                    </section>
+                    <section>
+                        <h2>Yeoman</h2>
+
+                        <ul>
+                            <li>Módulo de Node JS</li>
+                            <li>Generación de código.</li>
+                            <li>Sencillez para crear nuestros propios generadores.</li>
+                            <li>Unos 3360 generadores contribuidos.</li>
+                            <li>Unos 25 generadores para Drupal.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Instalación y uso</h2>
+                            <pre><code data-trim contenteditable>npm install -g yeoman</code></pre>
+                            <pre><code data-trim contenteditable>npm install -g repoPath/generator-something</code></pre>
+                            <pre><code data-trim contenteditable>yo generator-something</code></pre>
+                            <pre><code data-trim contenteditable>yo</code></pre>
+                    </section>
+                    <section>
+                        <h2>Screenshot</h2>
+                        <pre><code data-trim contenteditable>npm install -g yeoman</code></pre>
+                    </section>
+                </section>
+
+
+                <section>
+                    <section>
+                        <h2>I heard you like Drush</h2>
+                        <img data-src="http://static1.fjcdn.com/comments/4380181+_362d2b35fba44bef02aa5cae3f198db9.jpg">
+                    </section>
+                </section>
 
 				<section>
 					<h2>Point of View</h2>
