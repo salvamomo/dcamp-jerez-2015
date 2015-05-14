@@ -28,6 +28,7 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+        <link rel="stylesheet" href="css/fullscreen-img.css">
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -40,16 +41,17 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>No esperes a Drupal 8 para ampliar tu juego de herramientas</h1>
-					<h3>DrupalCamp Jerez 2015</h3>
+				<section data-background="assets/images/background-dcamp-2015-intro.png">
+					<br><br><br><br><br><br>
+					<h2>FTG, Yeoman, Genova y otras cosicas desde Albacete</h2>
 					<p>
+                        <br>
 						<small>Por <a href="http://adevfromtheplains.com/">Salva Molina</a> / <a href="http://twitter.com/salva_bg">@salva_bg</a></small>
 					</p>
 				</section>
 
-				<section>
-					<h2>Who The F...?</h2>
+				<section data-background="assets/images/background-dcamp-orange-empty.png">
+					<h2>Who The F***?</h2>
                     <ul>
                         <li>Salva Molina</li>
                         <li><a href="https://www.drupal.org/u/slv_">slv_</a> en Drupal.org</li>
@@ -58,7 +60,7 @@
                     </ul>
 				</section>
 
-                <section>
+                <section data-background="assets/images/background-dcamp-orange-empty.png">
                     <h2>De qué vamos a hablar?</h2>
                     <ul>
                         <li>Generación de código para custom fields.</li>
@@ -70,7 +72,7 @@
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
+					<section data-background="assets/images/background-dcamp-orange-empty.png">
 						<h2>The Field Type Generator (FTG)</h2>
 
                         <ul>
@@ -80,8 +82,8 @@
                             <li>Campos personalizados mediante Field API?</li>
                         </ul>
 					</section>
-                    <section>
-                        <h2>Custom personalizados: Problema</h2>
+                    <section data-background="assets/images/background-dcamp-orange-empty.png">
+                        <h2>Custom fields: Problema</h2>
                         <ol>
                             <li>Referencias a tipos de contenido?</li>
                             <li>Referencias a entidades personalizadas?</li>
@@ -89,21 +91,23 @@
                             <li>Campos personalizados mediante Field API?</li>
                         </ol>
                     </section>
-					<section>
+					<section data-background="assets/images/background-dcamp-orange-empty.png">
                         <h2>La solución: FTG</h2>
 						<p>Venga esa Demo, bitch.</p>
 					</section>
-					<section>
-                        <h2>Dries Approves</h2>
+					<section data-background="http://myreactiongifs.com/gifs/thumbsupcomputerkid.gif">
+                        <h2 style="top: -80px;position: relative;font-size: 5em;left: 500px;width: 600px;color: rgb(110, 216, 81);">
+                            Dries Approves
+                        </h2>
 						<a href="#/2">
-							<img data-src="http://myreactiongifs.com/gifs/thumbsupcomputerkid.gif">
+							<!--<img data-src="http://myreactiongifs.com/gifs/thumbsupcomputerkid.gif">-->
 						</a>
 					</section>
 				</section>
 
                 <!-- Example of nested vertical slides -->
                 <section>
-                    <section>
+                    <section data-background="assets/images/background-dcamp-orange-empty.png">
                         <img data-src="https://blog.openshift.com/wp-content/uploads/imported/yeoman-logo.png">
                     </section>
                     <section>
@@ -125,19 +129,135 @@
                             <pre><code data-trim contenteditable>yo</code></pre>
                     </section>
                     <section>
-                        <h2>Screenshot</h2>
-                        <pre><code data-trim contenteditable>npm install -g yeoman</code></pre>
+                        <h2>Línea de comandos</h2>
+                        <img data-src="/assets/images/generator-ctools-content-type-example.jpg" width="860px">
+                    </section>
+                    <section>
+                        <h2>Anatomía de un Plugin</h2>
+                        <pre style="font-size:22px"><code data-trim contenteditable>
+var yeoman = require('yeoman-generator');
+
+var CtoolsContentTypeGenerator = yeoman.Base.extend({
+
+    prompting: function () {
+        // Preguntamos por datos al usuario.
+    },
+
+    writing: function () {
+        // Generamos el código con los datos recogidos.
+    },
+
+});
+
+module.exports = CtoolsContentTypeGenerator;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Anatomía de un Plugin: Prompting</h2>
+                        <pre style="font-size:28px"><code data-trim contenteditable>
+prompts = [
+      {
+          type : 'input',
+          name : 'contentTypeTitle',
+          message : 'Content Type Title?',
+      }
+    ]
+this.prompt(prompts, function (answers) {
+    // Recogida de respuestas
+    done();
+}.bind(this));
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Anatomía de un Plugin: Writing</h2>
+                        <pre style="font-size:28px"><code data-trim contenteditable>
+writing: function () {
+    var argumentos_plantilla = {
+        // Generamos argumentos con los datos
+        // recogidos en "this".
+    };
+
+    this.template('Plantilla de código',
+                  'Ruta',
+                  argumentos_plantilla);
+},
+});
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Saca la demo y cállate</h1>
+                        <h1>Meter al rey?</h1>
+
+                    </section>
+                    <section>
+                        <img src="assets/images/everything-is-awesome.png" height="500px">
+                    </section>
+                    <section>
+                        <h1>En resumen</h1>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li>Mencionar post del blog</li>
+                        </ul>
                     </section>
                 </section>
 
-
                 <section>
+                    <section>
+                    <h2>Genova</h2>
+                    <h3>No tenía imagen para esto, sorry.</h3>
+                    </section>
+                    <section>
+                        <h2>Genova</h2>
+                        <ul>
+                            <li>Mismo concepto que Yeoman: Q & A.</li>
+                            <li>Drupal-based: Bye bye Node.js.</li>
+                            <li>Manejable mediante Drush.</li>
+                            <li>API no documentada, y no mantenida.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Genova: Generadores</h2>
+                        <ul>
+                            <li>Módulos y componentes (css, theme, schema, menu, permission, etc).</li>
+                            <li>Entity types.</li>
+                            <li>Formularios de varios pasos.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Genova: Demo</h2>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>IDC</h2>
+                        <img data-src="http://static1.fjcdn.com/comments/4380181+_362d2b35fba44bef02aa5cae3f198db9.jpg">
+                    </section>
                     <section>
                         <h2>I heard you like Drush</h2>
                         <img data-src="http://static1.fjcdn.com/comments/4380181+_362d2b35fba44bef02aa5cae3f198db9.jpg">
                     </section>
                 </section>
-
+                <section>
+                    <section>
+                        <h3>Much more!</h3>
+                        <!--<h4>List other libraries here: </h4>-->
+                        <!--<h4>https://github.com/ziadoz/awesome-php#dependency-management</h4>-->
+                        <img src="assets/images/the-passionate-programmer.jpg" height="450">
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><em>kthxbye</em></h2>
+                        <h2>¿Preguntas?</h2>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>SPAM?</h2>
+                    </section>
+                </section>
 				<section>
 					<h2>Point of View</h2>
 					<p>
@@ -229,7 +349,7 @@
 				</section>
 
 				<section>
-					<section data-background="#dddddd">
+					<section data-background="assets/images/slides-base-drupalcamp-2015-orange.png" data-background-size="50px">
 						<h2>Slide Backgrounds</h2>
 						<p>
 							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
@@ -433,14 +553,16 @@ Reveal.addEventListener( 'customevent', function() {
 		<script>
 
 			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
+			// https://gitub.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+                width: 960,
+                height: 600,
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
 				dependencies: [
