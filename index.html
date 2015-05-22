@@ -48,7 +48,7 @@
 					</p>
 				</section>
 
-				<section data-state="split-twocol-2-1" data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
+				<section data-state="split-twocol-2-1" data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px" style="font-size:36px">
 					<!--<div class="left-contents">-->
                     <br><br>
                         <h2>¿Quién c...?</h2>
@@ -107,20 +107,43 @@
                         <img data-src="assets/images/custom_field.jpg" width="2000">
                     </section>
                     <section>
-                        <h2>Custom fields: Problema</h2>
-                        <!--<h2 style="margin-bottom: 0">Custom fields: Problema</h2>-->
-                        <!--<img data-src="assets/images/doge_ftg.jpg">-->
-                        <ol>
-                            <li class="fragment">Mínimo 9 hooks a implementar.</li>
-                            <li class="fragment">Arrays everywhere.</li>
-                            <li class="fragment">Esquema para la BDD</li>
-                            <li class="fragment">Formulario, validación, integraciones, etc.</li>
-                        </ol>
+                        <br><br>
+                        <!--<h2>Custom fields: Problema</h2>-->
+                        <h2 style="margin-bottom: 0">Custom fields: El Problema</h2>
+                        <img data-src="assets/images/doge_ftg.jpg">
+                        <!--<ol>-->
+                            <!--<li class="fragment">Mínimo 9 hooks a implementar.</li>-->
+                            <!--<li class="fragment">Arrays everywhere.</li>-->
+                            <!--<li class="fragment">Esquema para la BDD</li>-->
+                            <!--<li class="fragment">Formulario, validación, integraciones, etc.</li>-->
+                        <!--</ol>-->
+                        <aside class="notes">
+                            - Mínimo 9 hooks a implementar.
+                            <br>
+                            - Drupal Hooks => Arrays por todos lados.
+                            <br>
+                            Esquema para la BDD, widget o formulario, etc...
+                        </aside>
                     </section>
 					<section>
                         <h2>La solución: FTG</h2>
-						<p>Venga esa Demo, bitch.</p>
-					</section>
+						<p>Venga esa demo, bitch.</p>
+                        <aside class="notes">
+                            - Caso personal.
+                            <br>
+                            - FTG en multitud de proyectos.
+                            <br>
+                            - Poca reutilización de código.
+                            <br>
+                            -> author_changes:
+                            <br>
+                            - uid                   (Entity ref -> user. Required => true).
+                            <br>
+                            - description       (Wysiwyg body)
+                            <br>
+                            - date                 (jquery calendar date).
+                        </aside>
+                    </section>
 					<section data-background="http://myreactiongifs.com/gifs/thumbsupcomputerkid.gif">
                         <!--<h2 style="top: -120px;position: relative;font-size: 5em;left: 650px;width: 600px;color: rgb(216, 212, 0);">-->
                             <!--Dries Approves-->
@@ -150,8 +173,7 @@
                     <section>
                         <h2>Yeoman</h2>
                         <ul>
-                            <li>Módulo de Node JS.</li>
-                            <li>Framework Generación de código.</li>
+                            <li>Framework Generación de código en Node.</li>
                             <li>Unos 3360 generadores contribuidos.</li>
                             <li>Unos 25 generadores para Drupal.</li>
                         </ul>
@@ -228,14 +250,16 @@
                         <br><br>
                         <img src="assets/images/everything-is-awesome.png" height="500px">
                     </section>
-                    <section>
-                        <h2>En resumen</h2>
+                    <section style="font-size:40px">
+                        <h2>Yeoman y Drupal</h2>
                         <ul>
                             <li>http://yeoman.io/generators/</li>
                             <li>Tutorial de creación de un plugin:  <a href="http://goo.gl/ckzVL9" target="_blank">http://goo.gl/ckzVL9</a></li>
                             <li>Review de plugins para Drupal:  <a href="http://goo.gl/Z7HEgH" target="_blank">http://goo.gl/Z7HEgH</a></li>
-                            <li>Ctools plugins, módulos, entities, themes, headless Drupal, etc...</a></li>
                         </ul>
+                        <aside class="notes">
+                            Ctools plugins, módulos, entities, themes, headless Drupal, etc...
+                        </aside>
                     </section>
                 </section>
 
@@ -247,18 +271,20 @@
                     <section>
                         <h2>Genova</h2>
                         <ul>
-                            <li>Mismo concepto que Yeoman: Q & A.</li>
-                            <li>Drupal-based: Bye bye Node.js.</li>
-                            <li>Manejable mediante Drush.</li>
-                            <li>API no documentada, y no mantenida.</li>
+                            <li>Módulo <em>Yeoman-like</em> para Drupal.</li>
+                            <li>Interacción en CLI mediante Drush.</li>
+                            <li>API no documentada!</li>
                         </ul>
+                        <aside class="notes">
+                            Bye bye Javascript / Node.
+                        </aside>
                     </section>
                     <section>
                         <h2>Genova: Generadores</h2>
                         <ul>
-                            <li>Módulos y componentes (css, theme, schema, menu, permission, etc).</li>
+                            <li>Módulos y componentes (theme, schema, menu, permission, etc).</li>
+                            <li>Formularios de varios pasos (<em><a href="http://drupal.org/project/mforms">mforms</a></em>).</li>
                             <li>Entity types.</li>
-                            <li>Formularios de varios pasos.</li>
                         </ul>
                     </section>
                     <section>
@@ -278,26 +304,27 @@
                     <section>
                         <br><br>
                         <h2>IDC</h2>
+                        <!--<h2>IDC  <strike>(I don't care)</strike></h2>-->
                         <img data-src="assets/images/yo_dawg_2.jpg" width="700px">
                     </section>
                     <section>
                         <h2>¿Qué es IDC?</h2>
-                        <!--poll? (I Don't Care, Interactive Drush Commands, etc...) -->
                         <ul>
                             <li>Interfaz para comandos interactivos de Drush.</li>
-                            <li class="fragment">1 comando => 1 clase de PHP.</li>
-                            <li class="fragment">1 comando => 1 plugin de ctools.</li>
+                            <li class="fragment">1 comando => 1 clase de PHP (ctools plugin).</li>
                             <li class="fragment">Mismo concepto que Yeoman.</li>
                         </ul>
                     </section>
                     <section>
                         <h2>¿Por qué?</h2>
-                        <!--poll? (I Don't Care, Interactive Drush Commands, etc...) -->
                         <ul>
                             <li>Drush mola, pero tiene sus limitaciones.</li>
                             <li>Facilitar el acceso a funciones de Drupal...</li>
                             <li>... y mejorar Drush como herramienta de desarrollo...</li>
                         </ul>
+                        <aside class="notes">
+                            - Proyecto personal empezado como playground.
+                        </aside>
                     </section>
                     <section>
                         <h2>Demo time</h2>
@@ -333,19 +360,10 @@
                         <ul>
                             <li>Twitter: <a href="https://twitter.com/salva_bg">@salva_bg</a></li>
                             <li>Github: <a href="https://github.com/salvamomo">salvamomo</a></li>
-                            <li><a href="http://adevfromtheplains.com/">A Dev From the Plains</a></li>
+                            <li>Blog: <a href="http://adevfromtheplains.com/">http://adevfromtheplains.com/</a></li>
                         </ul>
                     </section>
                 </section>
-                <!--<section>-->
-					<!--<h2>Speaker View</h2>-->
-					<!--<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>-->
-					<!--<p>Press the <em>S</em> key to try it out.</p>-->
-
-					<!--<aside class="notes">-->
-						<!--Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).-->
-					<!--</aside>-->
-				<!--</section>-->
 			</div>
 
 		</div>
