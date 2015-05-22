@@ -61,3 +61,11 @@ $selectionBackgroundColor: $magenta;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+.split-twocol-2-1 {
+  .left-contents {
+    float: left;
+    width: 15.5em;
+  }
+}

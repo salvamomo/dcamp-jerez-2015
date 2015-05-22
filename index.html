@@ -41,169 +41,205 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-background="assets/images/background-dcamp-2015-intro.png">
-					<br><br><br><br><br><br>
-					<h2>FTG, Yeoman, Genova y otras cosicas desde Albacete</h2>
+				<section data-background="assets/images/background-dcamp-2015-intro-no-strap.png" data-background-position="0px 0px">
+					<h2 style="margin-top: 2.7em;">Utiliza el generador, Luke</h2>
 					<p>
-                        <br>
-						<small>Por <a href="http://adevfromtheplains.com/">Salva Molina</a> / <a href="http://twitter.com/salva_bg">@salva_bg</a></small>
+                        Por <a href="http://adevfromtheplains.com/">Salva Molina</a> / <a href="http://twitter.com/salva_bg">@salva_bg</a>
 					</p>
 				</section>
 
-				<section data-background="assets/images/background-dcamp-orange-empty.png">
-					<h2>Who The F***?</h2>
-                    <ul>
-                        <li>Salva Molina</li>
-                        <li><a href="https://www.drupal.org/u/slv_">slv_</a> en Drupal.org</li>
-                        <li>Drupal Developer @ Code Enigma</li>
-                        <li>Rants, cries and nonsense at <a href="http://adevfromtheplains.com/">http://adevfromtheplains.com</a></li>
-                    </ul>
-				</section>
+				<section data-state="split-twocol-2-1" data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
+					<!--<div class="left-contents">-->
+                    <br><br>
+                        <h2>¿Quién c...?</h2>
+                        <ul>
+                            <li>Salva Molina</li>
+                            <li><a href="https://www.drupal.org/u/slv_">slv_</a> &nbsp; <em>/"self"/</em> en Drupal.org</li>
+                            <li>Drupal Developer @ Code Enigma</li>
+                            <li>Rants, cries and nonsense at <a href="http://adevfromtheplains.com/">http://adevfromtheplains.com</a></li>
+                        </ul>
+                        <img data-src="assets/images/banner_adevfromtheplains.png" width="600">
+                </section>
 
-                <section data-background="assets/images/background-dcamp-orange-empty.png">
-                    <h2>De qué vamos a hablar?</h2>
+                <section data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
+                <section>
+                    <h2>¿De qué vamos a hablar?</h2>
                     <ul>
-                        <li>Generación de código para custom fields.</li>
-                        <li>Yeoman, bitches</li>
-                        <li>Genova</li>
-                        <li>IDC (Drush for hipsters)</li>
+                        <li>FTG: Un generador de campos custom.</li>
+                        <li>Yeoman: Un framework para generar código.</li>
+                        <li>Genova: Más generación de código.</li>
                     </ul>
+                </section>
+                    <section>
+                        <h2>¿Para qué tanto generador?</h2>
+                        <ul>
+                            <li>El copy paste debe morir.</li>
+                            <li>Eficiencia.</li>
+                            <li>Dedicar nuestro tiempo a los problemas de verdad.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Objetivos</h2>
+                        <ul>
+                            <li>Ampliar nuestro juego de herramientas.</li>
+                            <li>Salir de la isla de Drupal.</li>
+                            <li>No hace falta esperar a Drupal 8.</li>
+                            <!--<li>Fabricar nuestras propias herramientas.</li>-->
+                        </ul>
+                    </section>
                 </section>
 
 				<!-- Example of nested vertical slides -->
-				<section>
-					<section data-background="assets/images/background-dcamp-orange-empty.png">
-						<h2>The Field Type Generator (FTG)</h2>
-
-                        <ul>
-                            <li>Referencias a tipos de contenido?</li>
-                            <li>Referencias a entidades personalizadas?</li>
-                            <li>Field collections?</li>
-                            <li>Campos personalizados mediante Field API?</li>
-                        </ul>
+				<section data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
+					<section>
+                        <br><br>
+						<h2 style="margin-bottom: 0">The Field Type Generator (FTG)</h2>
+                        <img data-src="assets/images/ftg-small.jpg" height="500px">
+                        <!--<ul>-->
+                            <!--<li>¿Referencias a tipos de contenido?</li>-->
+                            <!--<li>¿Referencias a entidades personalizadas?</li>-->
+                            <!--<li>¿Field collections?</li>-->
+                            <!--<li>¿Campos personalizados mediante Field API?</li>-->
+                        <!--</ul>-->
 					</section>
-                    <section data-background="assets/images/background-dcamp-orange-empty.png">
+                    <section>
+                        <h2>Ejemplo de campo personalizado</h2>
+                        <img data-src="assets/images/custom_field.jpg" width="2000">
+                    </section>
+                    <section>
                         <h2>Custom fields: Problema</h2>
+                        <!--<h2 style="margin-bottom: 0">Custom fields: Problema</h2>-->
+                        <!--<img data-src="assets/images/doge_ftg.jpg">-->
                         <ol>
-                            <li>Referencias a tipos de contenido?</li>
-                            <li>Referencias a entidades personalizadas?</li>
-                            <li>Field collections?</li>
-                            <li>Campos personalizados mediante Field API?</li>
+                            <li class="fragment">Mínimo 9 hooks a implementar.</li>
+                            <li class="fragment">Arrays everywhere.</li>
+                            <li class="fragment">Esquema para la BDD</li>
+                            <li class="fragment">Formulario, validación, integraciones, etc.</li>
                         </ol>
                     </section>
-					<section data-background="assets/images/background-dcamp-orange-empty.png">
+					<section>
                         <h2>La solución: FTG</h2>
 						<p>Venga esa Demo, bitch.</p>
 					</section>
 					<section data-background="http://myreactiongifs.com/gifs/thumbsupcomputerkid.gif">
-                        <h2 style="top: -80px;position: relative;font-size: 5em;left: 500px;width: 600px;color: rgb(110, 216, 81);">
-                            Dries Approves
-                        </h2>
-						<a href="#/2">
+                        <!--<h2 style="top: -120px;position: relative;font-size: 5em;left: 650px;width: 600px;color: rgb(216, 212, 0);">-->
+                            <!--Dries Approves-->
+                        <!--</h2>-->
+						<!--<a href="#/2">-->
 							<!--<img data-src="http://myreactiongifs.com/gifs/thumbsupcomputerkid.gif">-->
-						</a>
+						<!--</a>-->
 					</section>
+                    <section>
+                        <h2>¡Quieto parao!</h2>
+                        <ol>
+                            <li class="fragment">Validación.</li>
+                            <li class="fragment">Indices en el esquema creado.</li>
+                            <li class="fragment">Un buen field formatter para dejarlo bonito</li>
+                            <li class="fragment">...</li>
+                        </ol>
+                    </section>
 				</section>
 
                 <!-- Example of nested vertical slides -->
-                <section>
-                    <section data-background="assets/images/background-dcamp-orange-empty.png">
+                <section data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
+                    <section>
+                        <br><br>
                         <img data-src="https://blog.openshift.com/wp-content/uploads/imported/yeoman-logo.png">
+                        <h2>http://yeoman.io</h2>
                     </section>
                     <section>
                         <h2>Yeoman</h2>
-
                         <ul>
-                            <li>Módulo de Node JS</li>
-                            <li>Generación de código.</li>
-                            <li>Sencillez para crear nuestros propios generadores.</li>
+                            <li>Módulo de Node JS.</li>
+                            <li>Framework Generación de código.</li>
                             <li>Unos 3360 generadores contribuidos.</li>
                             <li>Unos 25 generadores para Drupal.</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Instalación y uso</h2>
-                            <pre><code data-trim contenteditable>npm install -g yeoman</code></pre>
-                            <pre><code data-trim contenteditable>npm install -g repoPath/generator-something</code></pre>
-                            <pre><code data-trim contenteditable>yo generator-something</code></pre>
-                            <pre><code data-trim contenteditable>yo</code></pre>
+                            <pre style="font-size:1em;"><code data-trim contenteditable>npm install -g yeoman</code></pre>
+                            <pre class="fragment" style="font-size:1em;"><code data-trim contenteditable>npm install -g generator-name</code></pre>
+                            <pre class="fragment" style="font-size:1em;"><code data-trim contenteditable>yo generator-name</code></pre>
+                            <!--<pre class="fragment" style="font-size:0.95em;"><code data-trim contenteditable>yo</code></pre>-->
+                    </section>
+                    <!--<section>-->
+                        <!--<h2>Línea de comandos</h2>-->
+                        <!--<img data-src="/assets/images/generator-ctools-content-type-example.jpg" width="860px">-->
+                    <!--</section>-->
+                    <!--<section>-->
+                        <!--<h2>Anatomía de un Plugin</h2>-->
+                        <!--<pre style="font-size:22px"><code data-trim contenteditable>-->
+<!--var yeoman = require('yeoman-generator');-->
+
+<!--var CtoolsContentTypeGenerator = yeoman.Base.extend({-->
+
+    <!--prompting: function () {-->
+        <!--// Preguntamos por datos al usuario.-->
+    <!--},-->
+
+    <!--writing: function () {-->
+        <!--// Generamos el código con los datos recogidos.-->
+    <!--},-->
+
+<!--});-->
+
+<!--module.exports = CtoolsContentTypeGenerator;-->
+                        <!--</code></pre>-->
+                    <!--</section>-->
+                    <!--<section>-->
+                        <!--<h2>Anatomía de un Plugin: Prompting</h2>-->
+                        <!--<pre style="font-size:28px"><code data-trim contenteditable>-->
+<!--prompts = [-->
+      <!--{-->
+          <!--type : 'input',-->
+          <!--name : 'contentTypeTitle',-->
+          <!--message : 'Content Type Title?',-->
+      <!--}-->
+    <!--]-->
+<!--this.prompt(prompts, function (answers) {-->
+    <!--// Recogida de respuestas-->
+    <!--done();-->
+<!--}.bind(this));-->
+                        <!--</code></pre>-->
+                    <!--</section>-->
+                    <!--<section>-->
+                        <!--<h2>Anatomía de un Plugin: Writing</h2>-->
+                        <!--<pre style="font-size:28px"><code data-trim contenteditable>-->
+<!--writing: function () {-->
+    <!--var argumentos_plantilla = {-->
+        <!--// Generamos argumentos con los datos-->
+        <!--// recogidos en "this".-->
+    <!--};-->
+
+    <!--this.template('Plantilla de código',-->
+                  <!--'Ruta',-->
+                  <!--argumentos_plantilla);-->
+<!--},-->
+<!--});-->
+                        <!--</code></pre>-->
+                    <!--</section>-->
+                    <section>
+                        <br><br>
+                        <h2>Saca la demo y cállate</h2>
+                        <img data-src="assets/images/porquenotecallas.jpg">
                     </section>
                     <section>
-                        <h2>Línea de comandos</h2>
-                        <img data-src="/assets/images/generator-ctools-content-type-example.jpg" width="860px">
-                    </section>
-                    <section>
-                        <h2>Anatomía de un Plugin</h2>
-                        <pre style="font-size:22px"><code data-trim contenteditable>
-var yeoman = require('yeoman-generator');
-
-var CtoolsContentTypeGenerator = yeoman.Base.extend({
-
-    prompting: function () {
-        // Preguntamos por datos al usuario.
-    },
-
-    writing: function () {
-        // Generamos el código con los datos recogidos.
-    },
-
-});
-
-module.exports = CtoolsContentTypeGenerator;
-                        </code></pre>
-                    </section>
-                    <section>
-                        <h2>Anatomía de un Plugin: Prompting</h2>
-                        <pre style="font-size:28px"><code data-trim contenteditable>
-prompts = [
-      {
-          type : 'input',
-          name : 'contentTypeTitle',
-          message : 'Content Type Title?',
-      }
-    ]
-this.prompt(prompts, function (answers) {
-    // Recogida de respuestas
-    done();
-}.bind(this));
-                        </code></pre>
-                    </section>
-                    <section>
-                        <h2>Anatomía de un Plugin: Writing</h2>
-                        <pre style="font-size:28px"><code data-trim contenteditable>
-writing: function () {
-    var argumentos_plantilla = {
-        // Generamos argumentos con los datos
-        // recogidos en "this".
-    };
-
-    this.template('Plantilla de código',
-                  'Ruta',
-                  argumentos_plantilla);
-},
-});
-                        </code></pre>
-                    </section>
-                    <section>
-                        <h1>Saca la demo y cállate</h1>
-                        <h1>Meter al rey?</h1>
-
-                    </section>
-                    <section>
+                        <br><br>
                         <img src="assets/images/everything-is-awesome.png" height="500px">
                     </section>
                     <section>
-                        <h1>En resumen</h1>
+                        <h2>En resumen</h2>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li>Mencionar post del blog</li>
+                            <li>http://yeoman.io/generators/</li>
+                            <li>Tutorial de creación de un plugin:  <a href="http://goo.gl/ckzVL9" target="_blank">http://goo.gl/ckzVL9</a></li>
+                            <li>Review de plugins para Drupal:  <a href="http://goo.gl/Z7HEgH" target="_blank">http://goo.gl/Z7HEgH</a></li>
+                            <li>Ctools plugins, módulos, entities, themes, headless Drupal, etc...</a></li>
                         </ul>
                     </section>
                 </section>
 
-                <section>
+                <section data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
                     <section>
                     <h2>Genova</h2>
                     <h3>No tenía imagen para esto, sorry.</h3>
@@ -228,321 +264,85 @@ writing: function () {
                     <section>
                         <h2>Genova: Demo</h2>
                     </section>
-                </section>
-                <section>
                     <section>
-                        <h2>IDC</h2>
+                        <h2>Ejemplos y tutoriales</h2>
+                        <li>Genova: <a href="http://drupal.org/project/genova_entity">http://drupal.org/project/genova</a></li>
+                        <li>Genova Entity: <a href="http://drupal.org/project/genova_entity">http://drupal.org/project/genova_entity</a></li>
+                        <li>Módulo mforms: <a href="http://drupal.org/project/mforms">http://drupal.org/project/mforms</a></li>
+                        <br>
+                        <li>Módulos y componentes: <a href="https://vimeo.com/42822787">https://vimeo.com/42822787</a></li>
+                        <li>Formularios multi-step: <a href="https://vimeo.com/42830894">https://vimeo.com/42830894</a></li>
+                    </section>
+                </section>
+                <section data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
+                    <section>
+                        <br><br>
+                        <h2>I heard you like Drush...</h2>
                         <img data-src="http://static1.fjcdn.com/comments/4380181+_362d2b35fba44bef02aa5cae3f198db9.jpg">
                     </section>
                     <section>
-                        <h2>I heard you like Drush</h2>
-                        <img data-src="http://static1.fjcdn.com/comments/4380181+_362d2b35fba44bef02aa5cae3f198db9.jpg">
+                        <h2>¿Qué es IDC?</h2>
+                        <!--poll? (I Don't Care, Interactive Drush Commands, etc...) -->
+                        <ul>
+                            <li>Interfaz para comandos interactivos de Drush.</li>
+                            <li class="fragment">1 comando => 1 clase de PHP.</li>
+                            <li class="fragment">1 comando => 1 plugin de ctools.</li>
+                            <li class="fragment">Mismo concepto que Yeoman.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>¿Por qué?</h2>
+                        <!--poll? (I Don't Care, Interactive Drush Commands, etc...) -->
+                        <ul>
+                            <li>Drush mola, pero tiene sus limitaciones.</li>
+                            <li>Facilitar el acceso a funciones de Drupal...</li>
+                            <li>... y mejorar Drush como herramienta de desarrollo...</li>
+                        </ul>
                     </section>
                 </section>
-                <section>
+                <section data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
                     <section>
-                        <h3>Much more!</h3>
+                        <br><br>
+                        <h2>En resumen</h2>
+                        <ul>
+                            <li>Utiliza los generadores, Luke.</li>
+                            <li>Construcción de herramientas propias.</li>
+                            <li>Miremos a otras comunidades</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <br><br>
+                        <h2>Fuentes</h2>
                         <!--<h4>List other libraries here: </h4>-->
                         <!--<h4>https://github.com/ziadoz/awesome-php#dependency-management</h4>-->
                         <img src="assets/images/the-passionate-programmer.jpg" height="450">
                     </section>
                 </section>
-                <section>
+                <section data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
                     <section>
                         <h2><em>kthxbye</em></h2>
-                        <h2>¿Preguntas?</h2>
+                        <h1>¿Preguntas?</h1>
                     </section>
                 </section>
-                <section>
+                <section data-background="assets/images/background-dcamp-orange-empty-no-bar.png" data-background-position="0px 0px">
                     <section>
-                        <h2>SPAM?</h2>
+                        <h2>Más, pero no mejor...</h2>
+                        <ul>
+                            <li>Twitter: <a href="https://twitter.com/salva_bg">@salva_bg</a></li>
+                            <li>Github: <a href="https://github.com/salvamomo">salvamomo</a></li>
+                            <li><a href="http://adevfromtheplains.com/">A Dev From the Plains</a></li>
+                        </ul>
                     </section>
                 </section>
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+                <!--<section>-->
+					<!--<h2>Speaker View</h2>-->
+					<!--<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>-->
+					<!--<p>Press the <em>S</em> key to try it out.</p>-->
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="assets/images/slides-base-drupalcamp-2015-orange.png" data-background-size="50px">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							<tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
-
+					<!--<aside class="notes">-->
+						<!--Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).-->
+					<!--</aside>-->
+				<!--</section>-->
 			</div>
 
 		</div>
@@ -555,8 +355,8 @@ Reveal.addEventListener( 'customevent', function() {
 			// Full list of configuration options available at:
 			// https://gitub.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-                width: 960,
-                height: 600,
+                width: 1024,
+                height: 768,
 				controls: true,
 				progress: true,
 				history: true,
